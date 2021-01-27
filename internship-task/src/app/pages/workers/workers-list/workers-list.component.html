@@ -1,0 +1,12 @@
+<div class="container">
+  <!-- No data message -->
+  <p *ngIf="workers.length <= 0" class="no-data text-center">
+    There is no worker added yet!
+  </p>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4  mb-4" *ngFor="let worker of workers">
+      <app-worker [worker]="worker" (deleteClicked)="removeWorker($event)"></app-worker>
+    </div>
+  </div>
+</div>

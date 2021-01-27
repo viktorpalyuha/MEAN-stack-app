@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body text-center">
+    <h5 class="card-title"> <input type="text" [(ngModel)]="worker.name"> <input type="text" [(ngModel)]="worker.surname"></h5>
+    <p class="card-text">
+      Phone: <input type="tel" [(ngModel)]="worker.phone"> <br />
+      Email: <input type="email" [(ngModel)]="worker.email">
+    </p>
+    <button
+      (click)="onSaveClick()"
+      class="btn btn-primary mr-3"
+    >
+      Save
+    </button>
+    <button (click)="onCancelClick()" class="btn btn-danger">Cancel</button>
+  </div>
+</div>

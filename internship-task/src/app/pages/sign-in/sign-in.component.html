@@ -1,0 +1,28 @@
+<main class="form-signin margin">
+  <form class="form-wrapper" (ngSubmit)="onSignInClick()">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <label for="login" class="visually-hidden">Login</label>
+    <input
+      type="text"
+      id="login"
+      name="login"
+      class="form-control"
+      placeholder="Login"
+      [(ngModel)]="user.login"
+      required
+    />
+    <label for="inputPassword" class="visually-hidden">Password</label>
+    <input
+      type="password"
+      id="inputPassword"
+      name="password"
+      class="form-control"
+      placeholder="Password"
+      [(ngModel)]="user.password"
+      required
+    />
+    <button class="w-100 btn btn-lg btn-primary mt-5" type="submit">
+      Sign in
+    </button>
+  </form>
+</main>

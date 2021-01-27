@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body text-center">
+    <h5 class="card-title">{{ worker?.name + " " + worker?.surname }}</h5>
+    <p class="card-text">
+      <span>Phone:</span> {{ worker?.phone }} <br />
+      Email: <span>{{ worker?.email }}</span>
+    </p>
+    <button
+      [routerLink]="['../edit-worker/', worker._id]"
+      class="btn btn-primary mr-3"
+    >
+      Edit
+    </button>
+    <button (click)="onDeleteClick()" class="btn btn-danger">Delete</button>
+  </div>
+</div>
